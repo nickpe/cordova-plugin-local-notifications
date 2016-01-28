@@ -37,12 +37,15 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Date;
+import android.util.Log;
 
 /**
  * Wrapper class around OS notification class. Handles basic operations
  * like show, delete, cancel for a single local notification instance.
  */
 public class Notification {
+    
+    private static String TAG = "LN";
 
     // Used to differ notifications by their life cycle state
     public enum Type {
@@ -119,6 +122,9 @@ public class Notification {
      * If the notification was in the past.
      */
     public boolean wasInThePast () {
+        LOG.d(TAG, "-------------------");
+        LOG.d(TAG, Date().after(options.getTriggerDate()));
+        LOG.d(TAG, "-------------------");
         return new Date().after(options.getTriggerDate());
     }
 
