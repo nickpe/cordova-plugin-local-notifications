@@ -123,7 +123,7 @@ public class Notification {
      */
     public boolean wasInThePast () {
         Log.d(TAG, "-------------------");
-        Log.d(TAG, Date().after(options.getTriggerDate()));
+        Log.d(TAG, "111111111111111111111111111");
         Log.d(TAG, "-------------------");
         return new Date().after(options.getTriggerDate());
     }
