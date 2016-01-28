@@ -122,9 +122,9 @@ public class Notification {
      * If the notification was in the past.
      */
     public boolean wasInThePast () {
-        LOG.d(TAG, "-------------------");
-        LOG.d(TAG, Date().after(options.getTriggerDate()));
-        LOG.d(TAG, "-------------------");
+        Log.d(TAG, "-------------------");
+        Log.d(TAG, Date().after(options.getTriggerDate()));
+        Log.d(TAG, "-------------------");
         return new Date().after(options.getTriggerDate());
     }
 
